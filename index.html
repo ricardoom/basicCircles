@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html {
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: sans-serif;
+    }
+
+    body {
+      margin-block: 1em;
+      margin-inline: 1em;
+    }
+
+    svg {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    svg circle {
+      color: #333;
+      fill: currentColor;
+      opacity: 0.1;
+    }
+
+    fieldset {
+      color: #eee;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 0;
+      display: block;
+      left: 25%;
+      padding-block: 1.5em;
+      padding-inline: 0.5em;
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+    }
+
+    fieldset legend {
+      background-color: #eee;
+      color: #333;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      -webkit-padding-before: 0.5em;
+      padding-block-start: 0.5em;
+      -webkit-padding-after: 0.5em;
+      padding-block-end: 0.5em;
+      -webkit-padding-start: 1em;
+      padding-inline-start: 1em;
+      -webkit-padding-end: 1em;
+      padding-inline-end: 1em;
+    }
+
+    fieldset button {
+      background-color: #333;
+      border-radius: 0.5em;
+      border-color: #555;
+      border-style: solid;
+      color: #eee;
+      font-size: 1rem;
+      -webkit-margin-start: 2em;
+      margin-inline-start: 2em;
+      -webkit-margin-end: 2em;
+      margin-inline-end: 2em;
+      padding-block: 1em;
+      padding-inline: 1.75em;
+    }
+  </style>
+</head>
+
+<body>
+  <svg class="svg-overlay" viewBox="0 0 300 300" id="svgCont">
+
+  </svg>
+  <fieldset>
+    <legend>Do things:</legend>
+    <button type="submit" id="buttonOne">make the circles</button>
+  </fieldset>
+</body>
+<script src="index.js"></script>
+
+</html>
