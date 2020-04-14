@@ -1,4 +1,8 @@
 //
+// a little project by which to learn some basic animation w/ JavaScript
+//
+
+//
 // get the button and wire it up:
 //
 const parent = document.querySelector('body');
@@ -41,7 +45,6 @@ const r = 150; // a baseline radius
 //
 
 function removeElementWithPizzaz(container) {
-  // console.log(container.children);
   const elementChildren = Array.from(container.children);
   elementChildren.forEach((element) => {
     const transformer = {
@@ -59,18 +62,15 @@ function removeElementWithPizzaz(container) {
     // Still need to really understand the Promises bit:
     Promise.all(
       element.getAnimations().map((animation) => {
-        // console.log(animation.finished);
         return animation.finished;
       })
     ).then(() => {
       return element.remove();
     });
   });
-  // console.log(eachChild);
 }
 
 function removeCircles(container) {
-  // it would be nice to have a better understanding of the _while_ loop.
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
   // while container.firsChild is true:
   while (container.firstChild) {
@@ -81,7 +81,6 @@ function removeCircles(container) {
 //
 // since this is built w/ SVGs; set the viewBox
 //
-
 function setViewBox() {
   svgContainer.setAttribute('viewBox', `0 0 ${x} ${y}`);
 }
@@ -133,23 +132,20 @@ function makeCircles(numberOfCircles) {
         newCircle.style.opacity = opacity - 0.1;
       },
     };
+
     // run the circle animation on each circle:
     function runAnimate() {
       animator(animateTheCircles);
     }
 
+    // run the animation function:
     runAnimate();
   }
 }
 
-// function makeOne() {
-//   removeCircles(svgContainer);
-//   const newCircle = document.createElement('circle');
-//   svgContainer.append(newCircle);
-//   newCircle.setAttribute('cx', getRandomInt(x));
-//   console.log(svgContainer);
-// }
-
+//
+// make the magic:
+//
 buttonOne.addEventListener('click', () => {
   makeCircles(getRandomInt(25));
 });
